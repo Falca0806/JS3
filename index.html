@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de notas</title>
+    <script defer src="js/index.js"></script>
+</head>
+<body>
+    <form class="form" id='form' autocomplete="off" style="text-align: left;">
+      <label>Cédula:</label>
+        <input type="text" title="cedula" name="cedula" id="cedula" maxlength="10" required onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
+        <br>
+      <label>Nombre del alumno</label>
+        <input type="text" title="nombre" name="nombre" id="nombre" maxlength="30" pattern="[a-zA-Z]+" required onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
+        <br>
+      <label>Nota de Matemática</label>
+        <select name="matematica" title="matematica" id="matematica" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+        <br>
+        <label>Nota de Física</label>
+        <select name="fisica" title="fisica" id="fisica" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+        <br>
+        <label>Nota de Programación</label>
+        <select name="programacion" title="programacion" id="programacion" required>
+          <option value="0">00</option>
+          <option value="1">01</option>
+          <option value="2">02</option>
+          <option value="3">03</option>
+          <option value="4">04</option>
+          <option value="5">05</option>
+          <option value="6">06</option>
+          <option value="7">07</option>
+          <option value="8">08</option>
+          <option value="9">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+         </select>
+         <br>
+         <br>
+        <div class="row-col-6">
+          <button id="btn" class="btn" type="button" onclick="guardarDatos()">Guardar</button>
+          <button id="btn1" class="btn" type="button" value="Limpiar" onclick="reset()">Limpiar</button>
+        </div>
+    </form>
+    <div style="text-align: center;">
+      <h2 style="text-align: center;">Resultados</h2>
+        <p id="respuestaMate"></p>
+        <p id="respuestaFis"></p>
+        <p id="respuestaProg"></p>
+        <p id="aprobadosMate"></p>
+        <p id="reprobadosMate"></p>
+        <p id="aprobadosFisica"></p>
+        <p id="reprobadosFisica"></p>
+        <p id="aprobadosProg"></p>
+        <p id="reprobadosProg"></p>
+        <p id="aproboTodas"></p>
+        <p id="aproboDos"></p>
+        <p id="aproboUna"></p>
+        <p id="maxMat"></p>
+        <p id="maxFis"></p>
+        <p id="maxProg"></p>
+    </div>
+
+</body>
+</html>
